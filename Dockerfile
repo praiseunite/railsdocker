@@ -17,6 +17,9 @@ RUN git clone https://github.com/lnbits/usermanager /app/lnbits/extensions/userm
 # This includes the database, the code, and the virtual environment.
 RUN chown -R 1000:1000 /app
 
+# 5a. Ensure the data directory exists and is owned by user 1000
+RUN mkdir -p /app/data && chown -R 1000:1000 /app/data
+
 # 6. Create the user 1000 (if it doesn't exist) to prevent "User not found" errors
 RUN useradd -u 1000 -m lnbits || true
 
