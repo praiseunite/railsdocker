@@ -1,0 +1,26 @@
+# .gitignore for LNbits deployment
+# Ignore Python cache and environment
+__pycache__/
+*.pyc
+*.pyo
+*.env
+venv/
+.env
+
+# Ignore Docker build artifacts
+*.log
+*.db
+*.sqlite
+
+# Ignore Fly.io config
+fly.toml
+
+# Ignore Railway config
+railway.json
+
+# Ignore node modules (if any)
+node_modules/
+
+# Ignore VS Code settings
+.vscode/
+fly.toml
